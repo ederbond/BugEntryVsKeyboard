@@ -4,11 +4,13 @@
              xmlns:local="clr-namespace:BugEntryVsKeyboard"
              x:Class="BugEntryVsKeyboard.MainPage">
 
-    <StackLayout>
-        <!-- Place new controls here -->
-    	<Label Text="Welcome to Xamarin.Forms!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
-    </StackLayout>
+  <Grid>
+
+    <Entry Placeholder="Sorry, if you tap me on droid I'll be covered by keyboard"  VerticalOptions="End" 
+           TranslationY="-100"/>
+
+    <Entry Placeholder="I dont get covered by keyboard on droid" VerticalOptions="End" />
+
+  </Grid>
 
 </ContentPage>
