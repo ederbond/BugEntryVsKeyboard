@@ -4,13 +4,24 @@
              xmlns:local="clr-namespace:BugEntryVsKeyboard"
              x:Class="BugEntryVsKeyboard.MainPage">
 
-  <Grid>
+  <ScrollView>
+    <Grid>
+      
+      <StackLayout>
+        <Label Text="This is the content of the page" FontSize="50"/>
+      </StackLayout>
 
-    <Entry Placeholder="Sorry, if you tap me on droid I'll be covered by keyboard"  VerticalOptions="End" 
-           TranslationY="-100"/>
+      <!-- with the TranslationY="-100" -->
+      <StackLayout TranslationY="-100" BackgroundColor="Purple" HeightRequest="100" VerticalOptions="End" >
+        <Entry Placeholder="Sorry, I have a bug and will be covered by the keyboard on android"  BackgroundColor="White" VerticalOptions="CenterAndExpand"/>
+      </StackLayout>
 
-    <Entry Placeholder="I dont get covered by keyboard on droid" VerticalOptions="End" />
-
-  </Grid>
+      <!-- without the TranslationY="-100" -->
+      <StackLayout BackgroundColor="#0888C3" HeightRequest="100" VerticalOptions="End" >
+        <Entry Placeholder="I don't have bugs, I've get repositioned when the keyboard appears, on both android and iOS "  BackgroundColor="White" VerticalOptions="CenterAndExpand"/>
+      </StackLayout>
+      
+    </Grid>
+  </ScrollView>
 
 </ContentPage>
